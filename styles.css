@@ -12,3 +12,21 @@ div {
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
+
+table {
+    border: 2px solid gray;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+}
+
+th, td {
+    border: 1px dashed gray;
+    padding: 3px;
+}
+
+#footnote {
+    font-size: 10;
+    color: blue;
+    text-align: left;
+}
