@@ -1,3 +1,5 @@
+$color: green
+
 h1 {
     color: blue;
     text-align: center;
@@ -7,7 +9,7 @@ h1 {
 }
 
 div {
-    color: green;
+    color: $color;
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -53,7 +55,7 @@ a::before {
 
 p::selection {
     color: blue;
-    background-color: green;
+    background-color: $color;
 }
 
 @media print {
@@ -85,4 +87,19 @@ p::selection {
     margin: 20px;
     padding: 20px;
     width: 250px;
+}
+
+.grid {
+    display: grid;
+    padding: 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    background-color: blue;
+    font-size: 22;
+    padding: 20px;
+    text-align: center;
 }
