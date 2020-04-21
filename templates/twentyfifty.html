@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Your Age in 2050
+{% endblock %}
+
+{% block body %}
+    <p>
+        This page calculates your age in 2050. The year is {{ current_year }}. Input your current age.
+    </p>
+
+    <p>
+        You are {{ age }}-years old now.
+    </p>
+
+    <p>
+        You will be {{ age2050 }}-years old in 2050.
+    </p>
+
+    <a href="{{ url_for('index')}}">To the comprehensive page.</a>
+
+{% endblock %} 
