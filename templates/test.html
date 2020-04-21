@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <div>
+        <h1 style="color:rgb(201,202,200);text-align:center">{{ headline }}</h1>
+        Hello, world! Hello all the way home. Not liking conflict. Lalala.
+        <h3 id="smaller">This is a slightly smaller headline</h3>
+        <p>I'm typing more stuff here.</p>
+        <img src="{{ url_for('static', filename='images/Great_Wave_off_Kanagawa2.jpg') }}" height="200">
+        <p></p><a href="#new feature">Google Search</a></p>
+        <p class="screen-only">This paragraphy would not appear if you try to print the web page.</p>
+        <p>An unordered list:</p>
+        <ul>
+            {% for i in nums %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+        An ordered list:
+        <ol>
+            <li>Something</li>
+            <li>Something</li>
+            <li>Something</li>
+            <ul>
+                <li>Somemore</li>
+                <li>Somemore</li>
+                <li>Somemore</li>
+            </ul>
+        </ol>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Years in Office</th>
+            </tr>
+            <tr>
+                <td>Kelvin</td>
+                <td>Tan</td>
+                <td>10</td>
+            </tr>
+            <button>Hey I change colours!</button>
+            <form>
+                <input name="message" type="text" placeholder="Insert your message here.">
+                <input name="password" type="password" placeholder="Insert your password here.">
+                Favorite fruit?
+                <input name="color" type="radio" value="orange"> Orange
+                <input name="color" type="radio" value="apple"> Apple
+                <input name="color" type="radio" value="durian"> Durian
+                <input name="first name" type="text" placeholder="Insert your first name here.">
+                <input name="last name" type="text" placeholder="Insert your last name here.">
+                <input name="age" type="number" placeholder="Insert your age here.">
+                <button>Submit</button>
+            </form>
+            
+            <p></p><a href="https://google.com">Google Search</a></p>
+            <p id="new feature">
+            Here is a new feature that I am working on!
+
+        </p>
+            
+        </table>
+
+        <p>
+            <div class="container">
+                <div>1. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>2. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>3. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>4. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>5. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>6. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>7. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>8. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>9. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>10. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>11. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>12. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>13. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>14. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                <div>15. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+            </div>
+    
+            </p>
+            <p>Let me just start to write something here to separate between the flex segment above and the grid segment below.</p>
+    
+            <p>
+                <div class="grid">
+                    <div class="grid-item">1. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">2. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">3. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">4. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">5. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">6. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">7. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">8. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">9. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">10. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">11. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">12. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">13. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">14. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+                    <div class="grid-item">15. This is just a placeholder for me to test some text as I go along. And there might be more useful content to be inserted if I want to.</div>
+        
+                </div>
+            </p>
+    
+
+
+        </div>
+
+        <div id="footnote">
+            This is a footnote that I am testing right now.
+        </div>
+    </body>
+
+
+</html>
