@@ -9,8 +9,27 @@
         <div>
         <h1 style="color:rgb(201,202,200);text-align:center">{{ headline }}</h1>
         Hello, world! Hello all the way home. Not liking conflict. Lalala.
+        <h3 id="counter">Counter: 0</h3>
         <h3 id="smaller">This is a slightly smaller headline</h3>
         <p>I'm typing more stuff here.</p>
+        
+        <script src="{{ url_for('static', filename='JS/something.js')}}"></script>
+
+        <p>
+        <button id="button_inc">Increment</button>
+        <button id="button_dec">Decrement</button>
+        </p>
+        <p>
+            <form id="form1">
+                <input id="name1" autocomplete="off" autofocus placeholder="Name" type="text">
+                <input type="submit">
+            </form>
+
+
+        </p>
+        
+        
+        
         <img src="{{ url_for('static', filename='images/Great_Wave_off_Kanagawa2.jpg') }}" height="200">
         <p></p><a href="#new feature">Google Search</a></p>
         <p class="screen-only">This paragraphy would not appear if you try to print the web page.</p>
