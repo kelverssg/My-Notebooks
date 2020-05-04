@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (i of ['#orange', '#brown', '#purple']) {
         document.querySelector(i).onclick = function() {
             document.querySelector('#colorful').style.color = i.slice(1, id_.length);
-    }
+    }}
 
     // This is a comment.
 });
