@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = document.querySelector('#name1').value;
         alert(`Hello ${name}!`);
     };
+    // This is a comment.
 });
 
 let counter = 0;
