@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`Hello ${name}!`);
     };
 
-    for (i of ['#orange', '#brown', '#purple']) {
-        document.querySelector(i).onclick = function() {
-            document.querySelector('#colorful').style.color = i.slice(1, id_.length);
-    }}
+    document.querySelectorAll('.color-change').forEach(function(button) {
+        button.onclick = function() {document.querySelector('#colorful').style.color = button.dataset.color;}
+    });
+
+    document.querySelector('#color-change-dropdown').onchange = () =>
+        document.querySelector('#hello').style.color = this.value;
 
     // This is a comment.
 });
