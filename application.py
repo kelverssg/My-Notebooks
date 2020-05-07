@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, jsonify, render_template, request, session
 from flask_session.__init__ import Session
 from datetime import datetime
+import requests
 
 app = Flask(__name__)
 
