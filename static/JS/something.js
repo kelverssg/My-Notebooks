@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Update the result div
             if (data.success) {
-                const contents = `1 USD is equal to ${data.rate} ${currency}.`;
+                const contents = `1 ${data.base} is equal to ${data.rate} ${currency.toUpperCase()}.`;
                 document.querySelector('#result-fx').innerHTML = contents;
             }
             else document.querySelector('#result-fx').innerHTML = 'There was an error.';

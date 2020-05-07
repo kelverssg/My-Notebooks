@@ -19,17 +19,18 @@ def index():
 def convert():
 
     # Query for currency exchange rate
-    currency = request.form.get('currency')
-    res = requests.get('http://api.fixer.io/latest', params={'base': 'USD', 'symbols': currency})
+    for i in ['USD', request.form.get('currency').upper()]:
+        currency = i
+        res = requests.get('http://data.fixer.io/api/latest?access_key=ed84ae9b541401a8b82473165a07ab8e', params={'symbols': currency})
+    
+        # Make sure request succeeded
+        if res.status_code != 200: return jsonify({'success': False})
 
-    # Make sure request succeeded
-    if res.status_code != 200: return jsonify({'success': False})
-
-    # Make sure currency is in response
-    data = res.json()
-    if currency not in data['rates']: return jsonify({'success': False})
-
-    return jsonify({'success': True, 'rate': data['rates'][currency]})
+        # Make sure currency is in response
+        data = res.json()
+        if currency not in data['rates']: return jsonify({'success': False})
+        if currency == 'USD': usd = data['rates'][currency]
+    return jsonify({'success': True, 'rate': round(data['rates'][currency]/usd, 4), 'base': 'USD'})
 
 @app.route('/notes', methods=["GET", "POST"])
 def le_notes():
